@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestRunner.ReplacementRunnerTest" tests="4" skipped="0" failures="1" errors="0" timestamp="2024-04-17T07:31:45" hostname="SILCHQSOFT178L" time="129.498">
+  <properties/>
+  <testcase name="runScenario[0](&quot;registration with valid data&quot;, &quot;Optional[Registration And Login]&quot;)" classname="TestRunner.ReplacementRunnerTest" time="28.493"/>
+  <testcase name="runScenario[1](&quot;user login with valid data&quot;, &quot;Optional[Registration And Login]&quot;)" classname="TestRunner.ReplacementRunnerTest" time="19.621"/>
+  <testcase name="runScenario[2](&quot;synchronise all the feature&quot;, &quot;Optional[Synchronise]&quot;)" classname="TestRunner.ReplacementRunnerTest" time="30.575"/>
+  <testcase name="runScenario[3](&quot;replacement the order&quot;, &quot;Optional[Replacement Order]&quot;)" classname="TestRunner.ReplacementRunnerTest" time="50.805">
+    <failure message="org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.&#10;Build info: version: '4.7.0', revision: '0a5b49d16f'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'&#10;Driver info: io.appium.java_client.android.AndroidDriver&#10;Command: [f95acb96-90aa-4f1d-bf79-aa70f3468350, stopRecordingScreen {}]&#10;Capabilities {appium:appActivity: .LoginActivity, appium:appPackage: com.sil.salesorderstl, appium:autoGrantPermissions: true, appium:databaseEnabled: false, appium:desired: {appActivity: .LoginActivity, appPackage: com.sil.salesorderstl, autoGrantPermissions: true, deviceName: SM-A047F, platformName: android, platformVersion: 13.0, udid: R58TA0A316N}, appium:deviceApiLevel: 34, appium:deviceManufacturer: samsung, appium:deviceModel: SM-A047F, appium:deviceName: R58TA0A316N, appium:deviceScreenDensity: 300, appium:deviceScreenSize: 720x1600, appium:deviceUDID: R58TA0A316N, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 1.875, appium:platformVersion: 14, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:udid: R58TA0A316N, appium:viewportRect: {height: 1417, left: 0, top: 48, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}&#10;Session ID: f95acb96-90aa-4f1d-bf79-aa70f3468350" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.7.0', revision: '0a5b49d16f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [f95acb96-90aa-4f1d-bf79-aa70f3468350, stopRecordingScreen {}]
+Capabilities {appium:appActivity: .LoginActivity, appium:appPackage: com.sil.salesorderstl, appium:autoGrantPermissions: true, appium:databaseEnabled: false, appium:desired: {appActivity: .LoginActivity, appPackage: com.sil.salesorderstl, autoGrantPermissions: true, deviceName: SM-A047F, platformName: android, platformVersion: 13.0, udid: R58TA0A316N}, appium:deviceApiLevel: 34, appium:deviceManufacturer: samsung, appium:deviceModel: SM-A047F, appium:deviceName: R58TA0A316N, appium:deviceScreenDensity: 300, appium:deviceScreenSize: 720x1600, appium:deviceUDID: R58TA0A316N, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 1.875, appium:platformVersion: 14, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:udid: R58TA0A316N, appium:viewportRect: {height: 1417, left: 0, top: 48, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: f95acb96-90aa-4f1d-bf79-aa70f3468350
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:565)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:272)
+	at io.appium.java_client.screenrecording.CanRecordScreen.stopRecordingScreen(CanRecordScreen.java:72)
+	at Core.AppHelper.stopRecording(AppHelper.java:66)
+	at SPAStepDefinition.ReplacementStepDefinition.successfullyReplaceTheProducts(ReplacementStepDefinition.java:47)
+	at ✽.successfully replace the products(file:///C:/Users/Rafi/Desktop/SPA_SFBL/SPAAndroidAutomation/src/test/resources/Features/04_replacement.feature:11)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOfRange(Arrays.java:3664)
+	at java.lang.String.&lt;init&gt;(String.java:207)
+	at java.lang.StringBuilder.toString(StringBuilder.java:407)
+	at java.util.Formatter.toString(Formatter.java:2355)
+	at java.lang.String.format(String.java:2940)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:79)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:272)
+	at io.appium.java_client.screenrecording.CanRecordScreen.stopRecordingScreen(CanRecordScreen.java:72)
+	at Core.AppHelper.stopRecording(AppHelper.java:66)
+	at SPAStepDefinition.ReplacementStepDefinition.successfullyReplaceTheProducts(ReplacementStepDefinition.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:73)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:117)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+@register
+Scenario Outline: registration with valid data                          # src/test/resources/Features/01_registerLogin.feature:14
+  Given user on SPA's registration page                                 # SPAStepDefinition.RegistrationStepDefinition.userOnSPASRegistrationPage()
+  When user click on register button                                    # SPAStepDefinition.RegistrationStepDefinition.userClickOnRegisterButton()
+  And fill the required information '99999998' '1234' and '01456222222' # SPAStepDefinition.RegistrationStepDefinition.fillTheRequiredInformationAnd(java.lang.String,java.lang.String,java.lang.String)
+  And user click on register button                                     # SPAStepDefinition.RegistrationStepDefinition.userClickOnRegisterButton()
+Successfully create user registration
+  Then successfully created user registration                           # SPAStepDefinition.RegistrationStepDefinition.successfullyCreatedUserRegistration()
+
+@login
+Scenario Outline: user login with valid data  # src/test/resources/Features/01_registerLogin.feature:25
+  Given user on SPA's login page              # SPAStepDefinition.LoginStepDefinition.userOnSPASLoginPage()
+  When user enter valid '99999998' and '1234' # SPAStepDefinition.LoginStepDefinition.userEnterValidAnd(java.lang.String,java.lang.String)
+  And click login button                      # SPAStepDefinition.LoginStepDefinition.clickLoginButton()
+org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.0', revision: '0a5b49d16f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [f95acb96-90aa-4f1d-bf79-aa70f3468350, findElement {using=xpath, value=//*[@text='OK']}]
+Capabilities {appium:appActivity: .LoginActivity, appium:appPackage: com.sil.salesorderstl, appium:autoGrantPermissions: true, appium:databaseEnabled: false, appium:desired: {appActivity: .LoginActivity, appPackage: com.sil.salesorderstl, autoGrantPermissions: true, deviceName: SM-A047F, platformName: android, platformVersion: 13.0, udid: R58TA0A316N}, appium:deviceApiLevel: 34, appium:deviceManufacturer: samsung, appium:deviceModel: SM-A047F, appium:deviceName: R58TA0A316N, appium:deviceScreenDensity: 300, appium:deviceScreenSize: 720x1600, appium:deviceUDID: R58TA0A316N, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 1.875, appium:platformVersion: 14, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:udid: R58TA0A316N, appium:viewportRect: {height: 1417, left: 0, top: 48, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: f95acb96-90aa-4f1d-bf79-aa70f3468350
+Successfully login to home page 
+  Then successfully open home page            # SPAStepDefinition.LoginStepDefinition.successfullyOpenHomePage()
+
+@synchronise
+Scenario: synchronise all the feature    # src/test/resources/Features/02_synchronise.feature:4
+  Given user on SPA's dashboard          # SPAStepDefinition.SynchroniseStepDefinition.userOnSPASDashboard()
+  When synchronise the products          # SPAStepDefinition.SynchroniseStepDefinition.synchroniseTheProducts()
+  And synchronise the retailers          # SPAStepDefinition.SynchroniseStepDefinition.synchroniseTheRetailers()
+  And synchronise the priority           # SPAStepDefinition.SynchroniseStepDefinition.synchroniseThePriority()
+  And synchronise the stock              # SPAStepDefinition.SynchroniseStepDefinition.synchroniseTheStock()
+  And synchronise the trade              # SPAStepDefinition.SynchroniseStepDefinition.synchroniseTheTrade()
+  And synchronise the replace cause      # SPAStepDefinition.SynchroniseStepDefinition.synchroniseTheReplaceCause()
+  And synchronise the product mrp        # SPAStepDefinition.SynchroniseStepDefinition.synchroniseTheProductMrp()
+  And synchronise the daily target       # SPAStepDefinition.SynchroniseStepDefinition.synchroniseTheDailyTarget()
+Successfully synchronise all data
+  Then successfully synchronise all data # SPAStepDefinition.SynchroniseStepDefinition.successfullySynchroniseAllData()
+
+@replacement
+Scenario: replacement the order          # src/test/resources/Features/04_replacement.feature:4
+  Given user on dashboard                # SPAStepDefinition.ReplacementStepDefinition.userOnDashboard()
+  When user click menu button            # SPAStepDefinition.ReplacementStepDefinition.userClickMenuButton()
+  And user click on replacement option   # SPAStepDefinition.ReplacementStepDefinition.userClickOnReplacementOption()
+  And user on replace receive            # SPAStepDefinition.ReplacementStepDefinition.userOnReplaceReceive()
+  And replace adjustment                 # SPAStepDefinition.ReplacementStepDefinition.replaceAdjustment()
+  Then successfully replace the products # SPAStepDefinition.ReplacementStepDefinition.successfullyReplaceTheProducts()
+      org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.7.0', revision: '0a5b49d16f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [f95acb96-90aa-4f1d-bf79-aa70f3468350, stopRecordingScreen {}]
+Capabilities {appium:appActivity: .LoginActivity, appium:appPackage: com.sil.salesorderstl, appium:autoGrantPermissions: true, appium:databaseEnabled: false, appium:desired: {appActivity: .LoginActivity, appPackage: com.sil.salesorderstl, autoGrantPermissions: true, deviceName: SM-A047F, platformName: android, platformVersion: 13.0, udid: R58TA0A316N}, appium:deviceApiLevel: 34, appium:deviceManufacturer: samsung, appium:deviceModel: SM-A047F, appium:deviceName: R58TA0A316N, appium:deviceScreenDensity: 300, appium:deviceScreenSize: 720x1600, appium:deviceUDID: R58TA0A316N, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 1.875, appium:platformVersion: 14, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:udid: R58TA0A316N, appium:viewportRect: {height: 1417, left: 0, top: 48, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: f95acb96-90aa-4f1d-bf79-aa70f3468350
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:565)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:272)
+	at io.appium.java_client.screenrecording.CanRecordScreen.stopRecordingScreen(CanRecordScreen.java:72)
+	at Core.AppHelper.stopRecording(AppHelper.java:66)
+	at SPAStepDefinition.ReplacementStepDefinition.successfullyReplaceTheProducts(ReplacementStepDefinition.java:47)
+	at âœ½.successfully replace the products(file:///C:/Users/Rafi/Desktop/SPA_SFBL/SPAAndroidAutomation/src/test/resources/Features/04_replacement.feature:11)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOfRange(Arrays.java:3664)
+	at java.lang.String.<init>(String.java:207)
+	at java.lang.StringBuilder.toString(StringBuilder.java:407)
+	at java.util.Formatter.toString(Formatter.java:2355)
+	at java.lang.String.format(String.java:2940)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:79)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:272)
+	at io.appium.java_client.screenrecording.CanRecordScreen.stopRecordingScreen(CanRecordScreen.java:72)
+	at Core.AppHelper.stopRecording(AppHelper.java:66)
+	at SPAStepDefinition.ReplacementStepDefinition.successfullyReplaceTheProducts(ReplacementStepDefinition.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:73)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:117)
+
+]]></system-out>
+  <system-err><![CDATA[SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+]]></system-err>
+</testsuite>

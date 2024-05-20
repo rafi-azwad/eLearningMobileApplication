@@ -1,0 +1,65 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.testng:testng:6.14.3'
+
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.9'
+    implementation 'org.json:json:20160810'
+    implementation 'io.rest-assured:rest-assured:4.5.0'
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.5.0'
+    // implementation 'org.seleniumhq.selenium:selenium-java:4.18.1'
+
+
+    //implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.6.2'
+
+
+    implementation group: 'io.appium', name: 'java-client', version:'8.3.0'
+
+    implementation group: 'org.apache.poi', name: 'poi', version: '3.9'
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.9'
+
+    testImplementation 'io.cucumber:cucumber-java:6.10.0'
+    testImplementation 'io.cucumber:cucumber-testng:6.10.0'
+
+}
+
+task androidSPARun(type: Test) {
+
+
+    useTestNG() {
+        useDefaultListeners = true
+        scanForTestClasses = false
+        testLogging.showStandardStreams = true
+        systemProperties project.properties.subMap(["Type"])
+        String testValue = System.getProperty("Type");
+        System.out.println(testValue)
+
+
+        if(testValue.equals("allTest")){
+            suites "src/test/resources/RunXML/allTest.xml"
+        }
+        else if(testValue.equals("registrationLoginTest")){
+            suites "src/test/resources/RunXML/registationAndLoginTest.xml"
+        }
+        else if(testValue.equals("synchroniseTest")){
+            suites "src/test/resources/RunXML/synchroniseTest.xml"
+        }
+        else if(testValue.equals("replacementTest")){
+            suites "src/test/resources/RunXML/replacementTest.xml"
+        }
+//  ./gradlew clean
+//  ./gradlew taskName -DType=nameofTest
+
+    }
+}
