@@ -1,6 +1,8 @@
 WebElement retailerName = new WebDriverWait(driver, Duration.ofSeconds(30)).
 until(ExpectedConditions.visibilityOfElementLocated(new AppiumBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains("text here").instance(0))")));
-retailerName.click(); //scroll down to the element and click
+retailerName.click(); //scroll down until the element clickable
+
+Question: Same page but different question how to click this element???
 
 
 DesiredCapabilities - 
